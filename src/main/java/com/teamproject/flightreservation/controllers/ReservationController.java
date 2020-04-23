@@ -1,8 +1,6 @@
 package com.teamproject.flightreservation.controllers;
 
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -28,10 +26,10 @@ public class ReservationController {
 	@RequestMapping("showCompleteReservation")
 	public String showCompleteReservation(@RequestParam("flightId") Long flightId, ModelMap modelMap) {
 		
-		Optional<Flight> flight = flightRepository.findById(flightId);
-		modelMap.addAttribute("flight", flight.get());
+		Flight flight = flightRepository.findById(flightId).get();
+		modelMap.addAttribute("flight", flight);
 		
-		return "login/completeReservation";
+		return "completeReservation";
 		
 	}
 	
@@ -42,7 +40,7 @@ public class ReservationController {
 		Reservation reservation = reservationService.bookFlight(request);
 		modelMap.addAttribute("msg", "Reservation created successfully and the id is " + reservation.getId());
 		
-		return "login/reservationConfirmation";
+		return "reservationConfirmation";
 		
 		
 		

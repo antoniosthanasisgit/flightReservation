@@ -26,9 +26,8 @@ public class FlightController {
 		
 		modelMap.addAttribute("flights", flights);
 		
-		return "login/displayFlights";
-		
-		
+		return "displayFlights";
 	}
-
+		
+	
 }
