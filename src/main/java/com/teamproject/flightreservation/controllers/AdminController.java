@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
-
-
 import com.teamproject.flightreservation.entities.Flight;
 import com.teamproject.flightreservation.entities.Passenger;
 import com.teamproject.flightreservation.entities.Reservation;
@@ -37,18 +35,9 @@ public class AdminController {
 		
 		List<Flight> flights = flightRepository.findAll();
   
-    	
-    	
    		modelMap.addAttribute("flights", flights);
 	
-		
-		
 		return "administrator/getAllFlights";
-		
-		
-		
-		
-		
 	}
 	
 	@GetMapping("/getAllPassengers")
@@ -56,55 +45,30 @@ public class AdminController {
 		
     	List<Passenger> passengers = passengerRepository.findAll();
     	
-   
 		modelMap.addAttribute("passengers", passengers);
 
-		
-		
-		return "administrator/getAllPassengers";
-		
-		
-		
-		
-		
+		return "administrator/getAllPassengers";	
 	}
 	
 	@GetMapping("/getAllUsers")
 	public String adminAllUsers(ModelMap modelMap) {
 		
     	List<User> users = userRepository.findAll();
-    	
-   
+    
 		modelMap.addAttribute("users", users);
 
-		
-		
-		return "administrator/getAllUsers";
-		
-		
-		
-		
-		
+		return "administrator/getAllUsers";	
 	}
 	
+
 	@GetMapping("/getAllReservations")
 	public String adminAllreservations(ModelMap modelMap) {
 		
 		List<Reservation> reservations = reservationRepository.findAll();
     	
-   
 		modelMap.addAttribute("reservations", reservations);
 
-		
-		
-		return "administrator/getAllReservations";
-		
-		
-		
-		
-		
+		return "administrator/getAllReservations";	
 	}
 	
-	
-
 }

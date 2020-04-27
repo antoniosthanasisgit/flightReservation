@@ -58,7 +58,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-lg">From</span>
   </div>
-  <input type="text" name="from" placeholder="AUS" required class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm"/>
+  <input type="text" list="from" name="from" placeholder="AUS" required class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm"/>
 </div>
 </div>
 
@@ -70,7 +70,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-lg">To</span>
   </div>
-  <input type="text" name="to" placeholder="NYC" required class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm"/>
+  <input type="text" list="to" name="to" placeholder="NYC" required class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm"/>
 </div>
 </div>
 
@@ -80,7 +80,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-lg"><i class="far fa-calendar-check"></i></span>
   </div>
-  <input type="text" name="departureDate" placeholder="MM-dd-yyyy" required class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm"/>
+  <input type="text" list="dateOfDeparture" name="departureDate" placeholder="MM-dd-yyyy" required class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm"/>
 </div>
 </div>
 
@@ -88,10 +88,32 @@
 
 
  <div class="input-group input-group-lg">
-     <input type="submit"  class="btn btn-primary form-control" value="search" aria-label="Large" aria-describedby="inputGroup-sizing-sm"/> 
+     <button type="submit"  class="btn btn-primary form-control"  aria-label="Large" aria-describedby="inputGroup-sizing-sm"><i class="fas fa-search"></i></button>
 </div>
 
 </div>
+
+<datalist id="from">
+  <option value="AUS">
+  <option value="NYC">
+  <option value="GR">
+</datalist>
+
+<datalist id="to">
+  <option value="NYC">
+  <option value="DAL">
+  <option value="SUI">
+</datalist>
+
+<datalist id="dateOfDeparture">
+  <option value="05-21-2020">
+  <option value="05-10-2020">
+  <option value="05-12-2020">
+  <option value="05-13-2020">
+  <option value="05-14-2020">
+  <option value="05-16-2020">
+  <option value="05-14-2020">
+</datalist>
 
 </form>
 </div>

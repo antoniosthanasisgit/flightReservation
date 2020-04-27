@@ -76,7 +76,7 @@
 <td scope="row">${flight.operatingAirlines}</td>
 <td scope="row">${flight.departureCity}</td>
 <td scope="row">${flight.arrivalCity}</td>
-<td scope="row">${flight.dateOfDeparture}</td>
+<td scope="row">${flight.departureTime}</td>
 <td><a href="showCompleteReservation?flightId=${flight.id}">Select</a></td>
 
 </tr>

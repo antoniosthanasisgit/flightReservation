@@ -14,7 +14,7 @@ import com.teamproject.flightreservation.repos.UserRepository;
 @Controller
 public class UserController {
 	
-	
+
 	@Autowired
 	private UserRepository userRepository;
 	
@@ -40,19 +40,19 @@ public class UserController {
 		return "login/login";
 	}
 	
-    @RequestMapping(value="/login",method=RequestMethod.POST)
-	public String login(@RequestParam("email")String email, @RequestParam("password")String password, ModelMap modelMap) {
-    	User user = userRepository.findByEmail(email);
-    	if(user.getPassword().equals(password) && !user.getPassword().equals(password="mirela")) {
-    		return "findFlights";
-    	}else if (user.getPassword().equals("mirela")){
-    		
-    		return "administrator/admin";
-    	}else {
-    		modelMap.addAttribute("msg", "Invalid user name or passsword. Please try again.");
-    	}
-		return "login/login";
-	}
-
+	
+	  @RequestMapping(value="/login",method=RequestMethod.POST)
+		public String login(@RequestParam("email")String email, @RequestParam("password")String password, ModelMap modelMap) {
+	    	User user = userRepository.findByEmail(email);
+	    	if(user.getPassword().equals(password) && !user.getPassword().equals(password="admin")) {
+	    		return "findFlights";
+	    	}else if (user.getPassword().equals("admin")){
+	    		
+	    		return "administrator/admin";
+	    	}else {
+	    		modelMap.addAttribute("msg", "Invalid user name or passsword. Please try again.");
+	    	}
+			return "login/login";
+		}
 
 }

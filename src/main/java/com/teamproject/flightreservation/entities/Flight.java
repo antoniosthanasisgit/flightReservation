@@ -1,6 +1,7 @@
 package com.teamproject.flightreservation.entities;
 
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -14,6 +15,7 @@ public class Flight extends AbstractEntity{
 	private String departureCity;
 	private String arrivalCity;
 	private Date dateOfDeparture;
+	private Timestamp departureTime;
 
 
 	public String getFlightNumber() {
@@ -45,6 +47,12 @@ public class Flight extends AbstractEntity{
 	}
 	public void setDateOfDeparture(Date dateOfDeparture) {
 		this.dateOfDeparture = dateOfDeparture;
+	}
+	public Timestamp getDepartureTime() {
+		return departureTime;
+	}
+	public void setDepartureTime(Timestamp departureTime) {
+		this.departureTime = departureTime;
 	}
 
 	
