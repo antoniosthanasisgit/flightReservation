@@ -9,14 +9,26 @@
     <style type="text/css">
     body {
      background-image:url("https://fullhdpictures.net/wp-content/uploads/2016/03/Full-HD-Airplane-Wallpaper.jpg");
-     background-repeat: no-repeat;
-     background-size: 100% 100%;
-    }
-    .form-control {
-    border: 0;
-}
-    html {
-    height: 100%
+ 
+  /* Image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Image doesn't repeat */
+  background-repeat: no-repeat;
+  
+  /* Makes the image fixed in the viewport so that it doesn't move when 
+     the content height is greater than the image height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;
+  
+  /* Pick a solid background color that will be displayed while the background image is loading */
+  background-color:#464646;
+  
+  /* SHORTHAND CSS NOTATION
+   * background: url(background-photo.jpg) center center cover no-repeat fixed;
+   */
 }
     </style>
 <title>Find Flights</title>
@@ -94,6 +106,7 @@
 </div>
 
 <datalist id="from">
+<option value="DAL">
   <option value="AUS">
   <option value="NYC">
   <option value="GR">
@@ -103,16 +116,11 @@
   <option value="NYC">
   <option value="DAL">
   <option value="SUI">
+  <option value="GR">
 </datalist>
 
 <datalist id="dateOfDeparture">
   <option value="05-21-2020">
-  <option value="05-10-2020">
-  <option value="05-12-2020">
-  <option value="05-13-2020">
-  <option value="05-14-2020">
-  <option value="05-16-2020">
-  <option value="05-14-2020">
 </datalist>
 
 </form>
